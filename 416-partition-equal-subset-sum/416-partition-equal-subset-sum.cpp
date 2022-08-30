@@ -24,8 +24,8 @@ public:
         vector<vector<bool>>dp(nums.size(),vector<bool>(k+1,0));
         for(int i=0;i<nums.size();i++)
             dp[i][0]=1;
-        for(int i=0;i<=k;i++)
-            dp[0][i]=(nums[0]==i);
+        if(nums[0]<=k)
+            dp[0][nums[0]]=1;
         for(int i=1;i<nums.size();i++){
             for(int j=1;j<=k;j++){
                 bool np=dp[i-1][j];
