@@ -10,9 +10,10 @@ public:
             return dp[n][target];
         int res = 0;
         for(int i=1;i<=k;i++){
-            if(target-i>=0){
+            if(target-i>=0)
                 res = (res + (solve(n-1,k,target-i,dp)))%mod;
-            }
+            else
+                break;
         }
         return dp[n][target] = res%mod;
     }
