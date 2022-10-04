@@ -12,8 +12,6 @@
 class Solution {
 public:
     TreeNode* findpos(TreeNode* root){
-        if(root->right == NULL)
-            return root;
         while(root->right!=NULL)
             root = root->right;
         return root;
