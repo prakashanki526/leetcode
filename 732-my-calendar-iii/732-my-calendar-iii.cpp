@@ -1,20 +1,19 @@
 class MyCalendarThree {
 public:
-    map<int,int>mp;
-    int maxCount = 0;
     MyCalendarThree() {
         
     }
     
+    map<int,int> mp;
     int book(int start, int end) {
+        int sum=0,maxi=0;
         mp[start]++;
         mp[end]--;
-        int count = 0;
         for(auto it:mp){
-            count += it.second;
-            maxCount = max(count,maxCount);
+            sum += it.second;
+            maxi = max(maxi,sum);
         }
-        return maxCount;
+        return maxi;
     }
 };
 
