@@ -8,7 +8,8 @@ public:
         for(int i=0 ; i<nums.size() ; i++){
             s += nums[i];
             
-            if(k!=0) s %= k;
+            // if(k!=0) 
+                s %= k;
             
             if(d.find(s) != d.end())
             {
